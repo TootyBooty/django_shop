@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 17:27+0300\n"
-"PO-Revision-Date: 2022-08-10 14:33+0000\n"
+"PO-Revision-Date: 2022-08-12 22:41+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -49,7 +49,7 @@ msgstr "Цена"
 
 #: cart/templates/cart/detail.html:34
 msgid "Update"
-msgstr "Обновлено"
+msgstr "Обновить"
 
 #: cart/templates/cart/detail.html:46
 msgid "Subtotal"
