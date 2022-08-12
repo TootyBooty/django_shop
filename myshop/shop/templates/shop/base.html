@@ -1,30 +1,50 @@
+{% load i18n %}
 {% load static %}
+{% load shop_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My shop{% endblock %}</title>
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <title>{% block title %}{% trans "My shop" %}{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}?{% cache_bust %}" rel="stylesheet">
 </head>
 
 <body>
     <div id="header">
-        <a href="/" class="logo">My shop</a>
+        <a href="/" class="logo">{% trans "My shop" %}</a>
+
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        <div class="languages">
+          <p>{% trans "Language" %}:</p>
+          <ul class="languages">
+            {% for language in languages %}
+              {% if language.code == LANGUAGE_CODE %}
+                <li class="selected">{{ language.name_local }}</li>
+              {% else %}
+                <li><a href="{% language_path request current_language_code=LANGUAGE_CODE new_language_code=language.code %}">{{ language.name_local }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
     </div>
 
     <div id="subheader">
         <div class="cart">
           {% with total_items=cart|length %}
               {% if total_items > 0 %}
-                Your cart: 
+                {% trans "Your cart"%}: 
                 <a href="{% url 'cart:cart_detail' %}">
-                  {{ total_items }} item{{ total_items|pluralize }},
-                  ${{ cart.get_total_price }}
+                  {% blocktrans with total_items_plural=total_items|pluralize total_price=cart.get_total_price %}
+                    {{ total_items }} item{{ total_items_plural }},
+                    ${{ total_price }}
+                  {% endblocktrans %}
                 </a>
               {% else %}
-                Your cart is empty.
+                {% trans "Your cart is empty" %}.
               {% endif %}
             {% endwith %}
         </div>

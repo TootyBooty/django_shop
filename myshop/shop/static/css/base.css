@@ -106,15 +106,25 @@ form p input {
     border-radius:4px;
 }
 
+
 ul.errorlist {
-   float:left;
-   color:#ff0000;
-   clear:both;
-   font-size:13px;
-   margin:0; 
-   padding:0;
+    float:left;
+    color:#ff0000;
+    clear:both;
+    font-size:13px;
+    margin:0; 
+    padding:0;
 }
 
+li.menu-selected {
+    color: #fff;
+    background:#5993bb;
+    border-radius:4px;
+}
+
+#header li.selected, a.selected {
+    color: rgb(158, 158, 158);
+}
 
 #header {
     padding:10px 100px;

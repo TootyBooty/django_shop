@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-10 17:27+0300\n"
+"PO-Revision-Date: 2022-08-10 14:33+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: cart/forms.py:8 cart/templates/cart/detail.html:14
+msgid "Quantity"
+msgstr "Количество"
+
+#: cart/templates/cart/detail.html:5 cart/templates/cart/detail.html:8
+msgid "Your shopping cart"
+msgstr "Ваша корзина"
+
+#: cart/templates/cart/detail.html:12
+msgid "Image"
+msgstr "Фото"
+
+#: cart/templates/cart/detail.html:13
+msgid "Product"
+msgstr "Товар"
+
+#: cart/templates/cart/detail.html:15 cart/templates/cart/detail.html:38
+msgid "Remove"
+msgstr "Удалить"
+
+#: cart/templates/cart/detail.html:16
+msgid "Unit price"
+msgstr "Цена за 1 шт."
+
+#: cart/templates/cart/detail.html:17
+msgid "Price"
+msgstr "Цена"
+
+#: cart/templates/cart/detail.html:34
+msgid "Update"
+msgstr "Обновлено"
+
+#: cart/templates/cart/detail.html:46
+msgid "Subtotal"
+msgstr "Промежуточный итог"
+
+#: cart/templates/cart/detail.html:52
+msgid "coupon"
+msgstr "Купон"
+
+#: cart/templates/cart/detail.html:62
+msgid "Total"
+msgstr "Всего"
+
+#: cart/templates/cart/detail.html:68
+msgid "Apply a coupon"
+msgstr "Применить купон"
+
+#: cart/templates/cart/detail.html:71
+msgid "Apply"
+msgstr "Применить"
+
+#: cart/templates/cart/detail.html:75
+msgid "Continue shoppung"
+msgstr "Продолжить покупки"
+
+#: cart/templates/cart/detail.html:76
+msgid "Checkout"
+msgstr "Оплатить"
+
+#: coupons/forms.py:5
+msgid "Coupon"
+msgstr "Купон"
+
+#: myshop/settings.py:105
+msgid "English"
+msgstr "Английский"
+
+#: myshop/settings.py:106
+msgid "Russian"
+msgstr "Русский"
+
+#: payment/templates/payment/canceled.html:6
+msgid "Your payment has not been processed"
+msgstr "Ваш платеж отклонен"
+
+#: payment/templates/payment/canceled.html:7
+msgid "There was a problem processing your payment"
+msgstr "Возникли проблемы с процессом оплаты"
+
+#: payment/templates/payment/done.html:5
+msgid "Your payment was successfull"
+msgstr "Ваш платеж совершен"
+
+#: payment/templates/payment/done.html:6
+msgid "Your payment has been processed successfully"
+msgstr "Ваш заказ успешно оплачен"
+
+#: payment/templates/payment/process.html:4
+#: payment/templates/payment/process.html:7
+msgid "Pay by credit card"
+msgstr "Оплата кредитной картой"
+
+#: payment/templates/payment/process.html:21
+msgid "Pay"
+msgstr "Оплата"
+
+#: shop/templates/shop/base.html:9 shop/templates/shop/base.html:15
+msgid "My shop"
+msgstr "Мой магазин"
+
+#: shop/templates/shop/base.html:22
+msgid "Your cart"
+msgstr "Ваша корзина"
+
+#: shop/templates/shop/base.html:24
+#, python-format
+msgid ""
+"\n"
+"                    %(total_items)s item%(total_items_plural)s,\n"
+"                    $%(total_price)s\n"
+"                  "
+msgstr ""
+"\n"
+"                    %(total_items)s товар%(total_items_plural)s,\n"
+"                    $%(total_price)s\n"
+"                  "
+
+#: shop/templates/shop/base.html:30
+msgid "Your cart is empty"
+msgstr "Ваша корзина пуста"
+
+#: shop/templates/shop/product/detail.html:20
+msgid "Add to cart"
+msgstr "Добавить в корзину"
+
+#: shop/templates/shop/product/list.html:7
+#, python-format
+msgid ""
+"\n"
+"            %(title)s\n"
+"        "
+msgstr ""
+
+#: shop/templates/shop/product/list.html:10
+#| msgid "Product"
+msgid "Products"
+msgstr "Cписок товаров"
+
+#: shop/templates/shop/product/list.html:16
+msgid "Categories"
+msgstr "Категории"
+
+#: shop/templates/shop/product/list.html:19
+msgid "All"
+msgstr "Все категории"
+
+#: shop/templates/shop/product/list.html:31
+#, python-format
+msgid ""
+"\n"
+"                    %(title)s \n"
+"                "
+msgstr ""
