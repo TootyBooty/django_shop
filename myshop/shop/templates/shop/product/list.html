@@ -1,6 +1,7 @@
 {% extends 'shop/base.html' %}
 {% load i18n %}
 {% load static %}
+{% load thumbnail %}
 
 {% block title %}
     {% if category %}
@@ -39,9 +40,20 @@
             {% else %}{% trans "Products" %}{% endif %}</h1>
         {% for product in products %}
             <div class="item">
+                {% if product.image %}
+                    {% thumbnail product.image "700x580" crop="center" as im %}
+                    <a href="{{ product.get_absolute_url }}">
+                        <img src="{{ im.url }}">
+                    </a>
+                    {% endthumbnail %}
+                {% else  %}
                 <a href="{{ product.get_absolute_url }}">
-                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+                    <img src="{% static 'img/no_image.png' %}">
                 </a>
+                    {% endif %}
+                <!-- <a href="{{ product.get_absolute_url }}">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+                </a> -->
                 <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
                 <br>
                 ${{ product.price }}
